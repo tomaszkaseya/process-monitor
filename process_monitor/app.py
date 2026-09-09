@@ -378,7 +378,7 @@ class App(tk.Tk):
         container.rowconfigure(0, weight=1)
         container.columnconfigure(0, weight=1)
 
-        self._tree.bind("<<TreeviewSelect>>", self._on_select)
+        self._tree.bind("<Double-1>", self._on_select)
 
         # path-column tooltip (column #7 = index 7 in the heading, displayed as "#7")
         path_col_index = f"#{col_ids.index('exe_path') + 1}"
